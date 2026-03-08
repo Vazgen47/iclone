@@ -3,5 +3,14 @@
     "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
     "x-next-cache-tags": "_N_T_/layout,_N_T_/store/layout,_N_T_/store/manage-product/layout,_N_T_/store/manage-product/page,_N_T_/store/manage-product/"
-  }
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/store/manage-product/__PAGE__",
+    "/store/manage-product",
+    "/store",
+    "/_index",
+    "/_head"
+  ]
 }

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/%28public%29/pricing/page.jsx"],"sourcesContent":["\nexport default function PricingPage() {\n    return (\n        <div className='mx-auto max-w-[700px] my-28'>\n            {/* Pricing Table */}\n\n        </div>\n    )\n}"],"names":[],"mappings":"gXACe,SAAS,IACpB,MACI,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,CAAI,UAAU,+BAKvB"}

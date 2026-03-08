@@ -1,14 +1,6 @@
-(()=>{var e={};e.id=746,e.ids=[746],e.modules={3295:e=>{"use strict";e.exports=require("next/dist/server/app-render/after-task-async-storage.external.js")},10846:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},29294:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-async-storage.external.js")},44870:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-route.runtime.prod.js")},63033:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-unit-async-storage.external.js")},74441:(e,t,r)=>{"use strict";r.r(t),r.d(t,{patchFetch:()=>v,routeModule:()=>y,serverHooks:()=>w,workAsyncStorage:()=>N,workUnitAsyncStorage:()=>T});var s={};r.r(s),r.d(s,{GET:()=>h,POST:()=>j});var a=r(96559),n=r(48088),o=r(37719),i=r(32190);let c=(e,t=null)=>t,u=(e,t)=>{},p=()=>c("iclone_messages",[]),d=e=>{let t=p();return t.push({...e,id:Date.now().toString(),createdAt:new Date().toISOString()}),u("iclone_messages",t),t},l=process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN||"",m=process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID||"",g=async e=>{if(!l||!m)return{success:!1,error:"Telegram credentials not configured"};try{let t=await fetch(`https://api.telegram.org/bot${l}/sendMessage`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:m,text:e,parse_mode:"HTML"})}),r=await t.json();if(t.ok)return{success:!0,data:r};return{success:!1,error:r.description||"Failed to send message"}}catch(e){return{success:!1,error:e.message}}},b=e=>`
-💬 <b>NEW CONTACT INQUIRY!</b>
-
-👤 <b>From:</b> ${e.name||"N/A"}
-📧 <b>Email:</b> ${e.email||"N/A"}
-📞 <b>Phone:</b> ${e.phone||"N/A"}
-
-📝 <b>Subject:</b> ${e.subject||"No Subject"}
-
-💭 <b>Message:</b>
-${e.message||"No message"}
-
-📅 <b>Time:</b> ${new Date(e.createdAt).toLocaleString("hy-AM")}
-  `.trim(),x=async e=>{let t=b(e);return await g(t)};async function h(){return i.NextResponse.json([])}async function j(e){try{let{name:t,email:r,phone:s,subject:a,message:n}=await e.json();if(!t||!r||!n)return i.NextResponse.json({error:"Name, email, and message are required"},{status:400});let o={id:Date.now().toString(),name:t,email:r,phone:s||"",subject:a||"Ընդհանուր հարցում",message:n,createdAt:new Date().toISOString(),status:"unread",priority:"medium"};return d(o),await x(o),i.NextResponse.json({success:!0,message:"Message sent successfully"},{status:201})}catch(e){return i.NextResponse.json({error:"Failed to send message"},{status:500})}}let y=new a.AppRouteRouteModule({definition:{kind:n.RouteKind.APP_ROUTE,page:"/api/contact/route",pathname:"/api/contact",filename:"route",bundlePath:"app/api/contact/route"},resolvedPagePath:"/Users/vazgenmkheyan/Desktop/E-Commerce-main/app/api/contact/route.js",nextConfigOutput:"",userland:s}),{workAsyncStorage:N,workUnitAsyncStorage:T,serverHooks:w}=y;function v(){return(0,o.patchFetch)({workAsyncStorage:N,workUnitAsyncStorage:T})}},78335:()=>{},96487:()=>{}};var t=require("../../../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),s=t.X(0,[447,580],()=>r(74441));module.exports=s})();
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/contact/route.js")
+R.c("server/chunks/[root-of-the-server]__4d661df2._.js")
+R.c("server/chunks/[root-of-the-server]__f408c708._.js")
+R.c("server/chunks/_next-internal_server_app_api_contact_route_actions_0bce5875.js")
+R.m(82502)
+module.exports=R.m(82502).exports
